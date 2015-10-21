@@ -1,3 +1,10 @@
+///////////////////////
+/*Defaults*/
+///////////////////////
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
   background-color: #fff;
   color: #333;
@@ -20,6 +27,7 @@ pre {
 
 a {
   color: #000;
+  text-decoration: none;
 
   &:visited {
     color: #666;
@@ -71,3 +79,63 @@ div {
     list-style: square;
   }
 }
+
+///////////////////////
+/*Our Code*/
+///////////////////////
+#wrapper {
+  width: 100%;
+}
+div.center {
+  margin-left: 40%;
+  font-size: 14pt;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;  
+}
+
+/* Footer */
+div#footer {
+  background: #E6E6E6;
+}
+
+
+/* Welcome */
+#header {
+  background-image: url("images/header-image.jpg");
+  height: 50px;  
+  margin: 0 auto;
+  padding-top: 25px;
+}
+h1#logotype {
+  font-size: 30pt;
+  letter-spacing: 10px;
+}
+div#main-nav {
+  background: #E6E6E6;
+  padding: 10px 0px 10px 0px;
+}
+#main-nav p{
+  display: inline-block;
+  right: 0; 
+}
+#main-nav h3 {
+  padding: 0px 5px 0px 15px;
+}
+#main-nav li {
+  display: inline-block;
+}
+.buttons {
+  background: #04B404;
+  height: 30px;
+  width: 250px;
+  border-radius: 4px;
+  padding: 15px;    
+}
+
+
+
+
+
+
+/* User */
