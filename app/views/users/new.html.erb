@@ -14,7 +14,16 @@
 			</ul>
 		</div>
 	</div> <!--wrapper-->
-	<div class="center">
+	<div class="center">	
+		<h1>Create Your Account</h1>
+			<div class="form-container">
+				<%= simple_form_for (@user) do |f| %>
+				  <%= f.input :username %> </br>
+				  <%= f.input :email %> </br>
+				  <%= f.input :pw %> </br>
+				  <%= f.button :submit %>
+				<% end %>
+			</div>
 	</div>
 
 	<div id="footer">
@@ -26,9 +35,3 @@
 </body>
 </html>
 
-<%= simple_form_for (@user) do |f| %>
-  <%= f.input :username %>
-  <%= f.input :email %>
-  <%= f.input :pw %>
-  <%= f.button :submit %>
-<% end %>
