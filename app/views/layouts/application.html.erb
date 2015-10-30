@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SLOG</title>
+  <title><%= yield(:title) %> | SLOG - Your one stop place to plan your hiking trip! </title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+<div id="wrapper">
+	<div id="main-nav">
+		<ul>
+			<li><h3><%= link_to 'SLOG', root_path %></h3> </li> |
+			<li>Trails</li> |
+			<li>Social</li> |
+			<li>Forums</li> |
+			<li><%=  link_to 'Log In', new_session_path %></li>
+		</ul>
+	</div>
+</div> <!--wrapper-->
+
+<!-- age specific starts here -->
 <%= yield %>
+
+<div id="footer">
+	<%= link_to 'Home', root_path %>
+</div>
 
 </body>
 </html>
