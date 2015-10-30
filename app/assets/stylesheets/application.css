@@ -13,3 +13,95 @@
  *= require_tree .
  *= require_self
  */
+
+ ///////////////////////
+/*Our Code*/
+///////////////////////
+#wrapper {
+  width: 100%;
+}
+div.center {
+  margin-left: 40%;
+  font-size: 14pt;
+  height: 100%;
+  min-height: 250px;
+}
+h1, h2, h3, h4, h5, h6 {
+  //text-align: center;    
+}
+h1, h2 {
+  margin: 50px 0px;
+}
+
+/* Footer */
+div#footer {
+  margin-top: 80px;
+  background: #E6E6E6;
+  height: 50px;
+  padding: 10px;
+}
+//////////////
+/* Welcome */
+//////////////
+#header {
+  background: #CCE680;
+  height: 150px;  
+  margin: 0 auto;
+  padding-top: 25px;
+  margin-bottom: 100px;
+}
+h1#logotype {
+  font-size: 30pt;
+  letter-spacing: 5px;
+  text-align: center;
+}
+div#main-nav {
+  background: #E6E6E6;
+  padding: 10px 0px 10px 0px;
+}
+#main-nav p{
+  display: inline-block;
+  right: 0; 
+}
+#main-nav h3 {
+  padding: 0px 5px 0px 15px;
+}
+#main-nav li {
+  display: inline-block;
+}
+.buttons {
+  background: #E6E6E6;
+  height: 30px;
+  width: 250px;
+  border-radius: 4px;
+  padding: 15px;    
+}
+
+///////////
+/* User */
+///////////
+/* Simple Forms */
+div.form-container {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  width: 60%;
+  background: #E6E6E6;
+  padding: 50px;
+  border-radius: 5px;
+}
+.simple_form div.input {
+  margin-bottom: 10px;
+  clear: both;
+}
+.simple_form label {
+  margin: 2px 10px;
+}
+.simple_form input[type='submit'] {
+  margin-left: 120px;
+}
+.simple_form input[type='text'] {
+  width: 200px;
+}
+.simple_form div.button {
+  padding: 3px 10px;
+}
