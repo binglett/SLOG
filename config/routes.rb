@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :hikes
   get 'social/social_list'
 
   resources :events
