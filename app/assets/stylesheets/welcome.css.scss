@@ -2,11 +2,8 @@
 //////////////
 /* Welcome */
 //////////////
-div#wrapper {
-  background: blue;
-}
 #header {
-  background: #CCE680;
+  background-image: asset-data-url("slog-background.jpg");
   height: 100%;
   min-height: 700px;  
   margin: 0 auto;
@@ -17,17 +14,23 @@ div.welcome-center {
   margin-top: 80px;
   margin-bottom: 80px;
   width: 700px;
-  padding: 10px;
+  padding: 110px 10px;
   font-size: 14pt;
-  height: 500px;
+  height: 450px;
   min-height: 250px;
-  background: rgba(128, 128, 128, 0.5);
+  background: rgba(128, 128, 128, 0.6);
   text-align: center;
 }
-h1#logotype {
-  font-size: 30pt;
+#logotype h1 {
+  font-size: 5vw;
+  display: inline-block;
   letter-spacing: 5px;
-  text-align: center;
+  vertical-align: middle;
+}
+#logotype img {
+  width: 120px; 
+  vertical-align: middle;
+  display: inline-block;
 }
 div#main-nav {
   background: #E6E6E6;
@@ -48,10 +51,28 @@ div#main-nav {
   height: 30px;
   width: 250px;
   border-radius: 4px;
-  padding: 15px;    
+  padding: 15px; 
+  line-height: 30px;   
+}
+#fb-button {
+  background: #3b5998;  
+}
+#fb-button a {
+  color: white
+}
+#fb-button a:hover {
+  color: #CCE680;
 }
 div#welcome-footer{
   background: grey;
   height: 20px;
   bottom: 0;
+  text-align: right;  
+  padding-right: 10px;
+}
+#welcome-footer a {
+  color: white;
+}
+#welcome-footer a:hover {
+  color: #CCE680;
 }

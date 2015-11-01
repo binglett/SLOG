@@ -117,10 +117,8 @@ div.center {
   background: grey; /* temp */
 }
 h1, h2, h3, h4, h5, h6 {
-  text-align: center;    
-}
-h1, h2 {
-  margin: 50px 0px;
+  text-align: center;   
+  line-height: 1.5em; 
 }
 div#footer {
   margin-top: 80px;
@@ -128,8 +126,15 @@ div#footer {
   height: 50px;
   padding: 10px;
 }
-div.buttons {
-  margin: 0 auto;
-  text-align: center;
+div.form-space {
+  margin: 50px 0px;
 }
+div.buttons {  
+  margin: 0 auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;  
+}
+
+
 
