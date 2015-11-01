@@ -128,4 +128,8 @@ div#footer {
   height: 50px;
   padding: 10px;
 }
+div.buttons {
+  margin: 0 auto;
+  text-align: center;
+}
 

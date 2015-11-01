@@ -2,11 +2,27 @@
 //////////////
 /* Welcome */
 //////////////
+div#wrapper {
+  background: blue;
+}
 #header {
   background: #CCE680;
-  height: 150px;  
+  height: 100%;
+  min-height: 700px;  
   margin: 0 auto;
   padding-top: 25px;
+}
+div.welcome-center {
+  margin: 0 auto;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  width: 700px;
+  padding: 10px;
+  font-size: 14pt;
+  height: 500px;
+  min-height: 250px;
+  background: rgba(128, 128, 128, 0.5);
+  text-align: center;
 }
 h1#logotype {
   font-size: 30pt;
@@ -33,4 +49,9 @@ div#main-nav {
   width: 250px;
   border-radius: 4px;
   padding: 15px;    
+}
+div#welcome-footer{
+  background: grey;
+  height: 20px;
+  bottom: 0;
 }
