@@ -8,11 +8,11 @@ class User < ActiveRecord::Base
   validates :email,     :presence => true,
             :format               => { :with => email_regex},
             :uniqueness           => { :case_sensitive => false}
-  validates :password,    :confirmation => true,
+  validates :password, :confirmation => true,
             :presence             => true,
             :length               => { :within => 6..40}
   def has_password?(submitted_password)
-    encrypted_password==submitted_password
+    encrypted_password==encrypt(submitted_password)
   end
   def self.authenticate(email, submitted_password)
     user = find_by_email(email)

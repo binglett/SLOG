@@ -1,19 +1,16 @@
 class UsersController < ApplicationController
   layout "application"
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-
-  def user_params
-        params.require(:user).permit(:username, :email, :password, :password_confirmation)
-  end
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    @user = User.all
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
+      @user=User.find(params[:id])
   end
 
   # GET /users/new
