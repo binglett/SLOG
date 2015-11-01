@@ -1,13 +1,13 @@
 <provide(:title, "Become a SLOG and start planning hikes easily now!")>
-<div class="center">	
+<div class="center">
 	<h1>Create Your Account</h1>
 		<div class="form-container">
 			<%= simple_form_for (@user) do |f| %>
 			  <%= f.input :username %> </br>
 			  <%= f.input :email %> </br>
-			  <%= f.input :pw %> </br>
+			  <%= f.input :password %> </br>
+				<%= f.input :password_confirmation %> </br>
 			  <%= f.button :submit %>
 			<% end %>
 		</div>
 </div>
-
