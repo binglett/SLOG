@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  layout "application"
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def user_params
