@@ -107,7 +107,7 @@ div {
 ////////////////////////
 div#wrapper {
     height: 100%;       /* These two lines were the key. */
-    background: white;
+    background: blue;
     overflow: hidden;
 } /* temp */
 div#main-nav {
@@ -126,11 +126,14 @@ div#main-nav {
 }
 div.center {  
   margin: 0 auto;
-  width: 700px;
+  margin-bottom: 15px;
+  width: 800px;
   padding: 10px;
-  font-size: 14pt;
+  /*font-size: 14pt;*/
+  min-height: 800px;
   height: 100%;
-  background: grey; /* temp */
+  background: #E6E6E6; /* temp */
+  border-radius: 4px;
 }
 h1, h2, h3, h4, h5, h6 {
   text-align: center;   
@@ -154,27 +157,30 @@ div.buttons {
 div.column-3 {
   box-sizing: border-box;
   width: 33%;
-  height: 700px;
+  min-height: 800px;
+  height: 100%;
   display: inline-block;
   vertical-align: top;
   padding: 50px 20px;
 }
+.forms {
+  width: 60%;
+  height: 500px;
+  margin: 0 auto;
+}
+th {
+  width: 150px;
+  text-align: left;
+}
+td {
+  width: 150px;
+  text-align: left;
+}
 /////////////////////
 /* Simple Forms */
 /////////////////////
-div.form-container {
-  margin-top: 80px;
-  margin-bottom: 80px;
-  margin: auto 0;
-  width: 60%;
-  background: blue;
-  padding: 50px;
-  border-radius: 5px;
-  display: block;
-  height: 500pc;
-}
 .simple_form div.input {
-  margin-bottom: 10px;
+  margin: 30px;
   clear: both;
 }
 .simple_form label {
