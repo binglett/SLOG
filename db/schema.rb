@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151103200627) do
+ActiveRecord::Schema.define(version: 20151104012705) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,8 +35,8 @@ ActiveRecord::Schema.define(version: 20151103200627) do
     t.integer  "grade"
     t.integer  "difficulty"
     t.float    "rating"
-    t.string   "open_date"
-    t.string   "close_date"
+    t.datetime "open_date"
+    t.datetime "close_date"
   end
 
   create_table "sessions", force: :cascade do |t|
