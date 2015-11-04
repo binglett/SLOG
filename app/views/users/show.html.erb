@@ -1,8 +1,39 @@
-<provide(:title, "Congratulations! You are now a SLOG!")>
-<div class="center">
-	<h1>User <%= @user.id %></h1>
-	<p id="notice"><%= notice %></p>
-	<%= link_to('Sign Out', session_path, :method => :delete) %>
+<% provide(:title, "Congratulations! You are now a SLOG!") %>
+<div id="user-home-panel">
+	<div class="column-3" id="user-info">		
+		<h2><%= @user.username %></h2>	
+		<%= image_tag("logo_placeholder.png") %>
+		<p>Region: Vancouver (replace)</p>
+		<p>Badges: * * * </p>
+		<p>Hikes Done: 7</p>
+		<p>Groups: 4</p>
+		<p id="notice"><%= notice %></p>
+		<p><%= link_to('Sign Out', session_path, :method => :delete) %></p>
+	</div>
+
+	<div class="column-3" id="user-feed">
+		<div class="feed-item">
+			<h4>Hey there I am a feed.</h4>
+			<p>Some feed goes here. I am not sure what will go here right now. Sample text will be the same for each user?</p>
+			<p class="time-stamp">2015 Novemeber 5 | </p>			
+		</div>
+		<div class="feed-item">
+			<h4>I am another feed item.</h4>
+			<p>Perhaps upcoming events? Public events? New hikes that have been added to the archive?</p>
+			<p class="time-stamp">2015 Novemeber 5 | </p>			
+		</div>
+	</div>
+
+	<div class="column-3" id="user-options">
+		<p>*Please change the paths to link to other views please~</p>
+		<ul id="user-buttons">
+			<li><h2><%= link_to 'View Hikes', user_path %></h2></li>
+			<li><h2><%= link_to 'Events', user_path %></h2></li>
+			<li><h2><%= link_to 'Forums', user_path %></h2></li>
+			<li><h2><%= link_to 'Groups', user_path %></h2></li>
+		</ul>
+	</div>
+
 </div>
 
 

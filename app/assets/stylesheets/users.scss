@@ -1,4 +1,57 @@
 ///////////
 /* User */
 ///////////
+div#user-home-panel {
+	width: 100%;
+	margin: auto 0;
+}
+#user-info {
+	background: #e6e6e6;
+	img {
+		width: 200px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}	
+	p {
+		text-align: center;
+		font-size: 12pt;
+	}
+}
+#user-feed {
+
+}
+.feed-item {
+	h4 {		
+		text-align: left;
+	}	
+	.time-stamp {
+		font-style: italic;
+		font-size: 0.8em;
+		color: #e6e6e6;
+	}
+	margin-bottom: 30px;
+}
+#user-options {
+	background: #e6e6e6;
+}
+#user-buttons ul {
+	list-style-type: none;
+	display: inline-block;	
+}
+#user-buttons li {
+	list-style-type: none;
+	height: 100px;
+	width: 250px;
+	margin: 0 auto;
+	margin-top: 50px;	
+	background: green;
+	text-align: center;
+	border-radius: 4px;
+}
+#user-buttons h2 {
+	line-height: 100px;
+}
+#user-option {
+}
 
