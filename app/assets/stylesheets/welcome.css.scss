@@ -54,14 +54,37 @@ div#main-nav {
   padding: 15px; 
   line-height: 30px;   
 }
+div#signup-button:hover {
+  background: #99FF33;
+}
 #fb-button {
   background: #3b5998;  
+}
+div#fb-button:hover {
+  background: #8b9dc3;
 }
 #fb-button a {
   color: white
 }
-#fb-button a:hover {
-  color: #CCE680;
+#login-button {
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+  background: rgba(128, 128, 128, 0.3);  
+  height: 10px;
+  width: 50px;
+  border-radius: 4px;
+  padding: 15px; 
+  line-height: 10px;  
+}
+div#login-button:hover {
+  background: rgba(128, 128, 128, 0.8);  
+} 
+#login-button a {
+  color: grey;
+}
+#login-button a:hover {
+  color: white;
 }
 div#welcome-footer{
   background: grey;

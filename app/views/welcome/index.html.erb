@@ -1,13 +1,14 @@
 <% provide(:title, "Welcome to SLOG, look for hikes here or sign up!") %>
 <div id="header">
+	<div id="login-button"><%= link_to 'Log In', new_session_path %></div>
 	<div class="welcome-center">	
 		<div id="logotype">			
 			<%= image_tag("logo_placeholder.png") %>
 			<h1>SLOG</h1>
 		</div>
 		<h3>Start planning your hikes now!</h3>
-		<div class="form-space">
-			<div class="buttons">
+		<div class="form-space" >
+			<div class="buttons" id="signup-button">
 				<%= link_to 'Find New Hikes!!', new_user_path %>
 			</div>
 			</br>
