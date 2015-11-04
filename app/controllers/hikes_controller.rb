@@ -69,6 +69,7 @@ class HikesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def hike_params
-      params[:hike]
+      params.require(:hike).permit(:name, :region, :distance, :difficulty, 
+      :grade, :open_date,:close_date)
     end
 end
