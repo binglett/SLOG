@@ -1,15 +1,17 @@
 <div class="center">
 
 	<h1>Sign In</h1>
-	<div class="forms">
-		<% if flash[:error] %>
-			 <p><%= flash[:error] %></p>
-		<% end %>
-	  <%= simple_form_for(:session, :url =>sessions_path)  do |f| %>
-			<%= f.input :email %>
-			<%= f.input :password %>
-			<%= f.button :submit %>
-		<% end %>
+	<div class="form-space">
+		<div class="forms">
+			<% if flash[:error] %>
+				 <p><%= flash[:error] %></p>
+			<% end %>
+		  <%= simple_form_for(:session, :url =>sessions_path)  do |f| %>
+				<%= f.input :email %>
+				<%= f.input :password %>
+				<%= f.button :submit %>
+			<% end %>
+		</div>
 	</div>
 	<p><em>Sign in as admin</em></p>
 </div>

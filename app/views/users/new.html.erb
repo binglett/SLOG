@@ -2,12 +2,12 @@
 <div class="center">
 	<h1>Create Your Account</h1>
 		<div class="form-space">
-			<div class="form-container">
+			<div class="forms">
 				<%= simple_form_for (@user) do |f| %>
 				  <%= f.input :username %> </br>
 				  <%= f.input :email %> </br>
 				  <%= f.input :password %> </br>
-					<%= f.input :password_confirmation %> </br>
+				  <%= f.input :password_confirmation %> </br>
 				  <%= f.button :submit %>
 				<% end %>
 			</div>
