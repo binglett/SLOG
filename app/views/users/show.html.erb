@@ -25,10 +25,9 @@
 	</div>
 
 	<div class="column-3" id="user-options">
-		<p>*Please change the paths to link to other views please~</p>
 		<ul id="user-buttons">
-			<li><h2><%= link_to 'View Hikes', user_path %></h2></li>
-			<li><h2><%= link_to 'Events', user_path %></h2></li>
+			<li><h2><%= link_to 'View Hikes', :controller => :hikes, :action => :index   %></h2></li>
+			<li><h2><%= link_to 'Events',:controller => :events, :action => :new   %></h2></li>
 			<li><h2><%= link_to 'Forums', user_path %></h2></li>
 			<li><h2><%= link_to 'Groups', user_path %></h2></li>
 		</ul>
