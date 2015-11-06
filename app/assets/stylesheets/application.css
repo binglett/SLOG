@@ -154,6 +154,15 @@ div.buttons {
   margin-bottom: 5px;
   text-align: center;  
 }
+div.column-2 {
+  box-sizing: border-box;
+  width: 45%;
+  height: auto;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+  padding: 50px 20px;
+}
 div.column-3 {
   box-sizing: border-box;
   width: 33%;

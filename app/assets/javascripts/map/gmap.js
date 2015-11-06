@@ -11,7 +11,7 @@ function initialize() {
           zoom: 10,
           mapTypeId: google.maps.MapTypeId.NORMAL,
           panControl: true,
-          scaleControl: false,
+          scaleControl: true,
           streetViewControl: true,
           overviewMapControl: true
         };
