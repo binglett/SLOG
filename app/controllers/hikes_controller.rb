@@ -10,7 +10,6 @@ class HikesController < ApplicationController
   # GET /hikes/1
   # GET /hikes/1.json
   def show
-    @hikes = Hike.find(params[:hike_name])
   end
 
   # GET /hikes/new
@@ -70,7 +69,7 @@ class HikesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def hike_params
-      params.require(:hike).permit(:name, :region, :distance, :difficulty,
+      params.require(:hike).permit(:name, :region, :distance, :difficulty, 
       :grade, :open_date,:close_date)
     end
 end
