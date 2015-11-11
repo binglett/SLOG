@@ -112,7 +112,7 @@ div#wrapper {
 } /* temp */
 div#main-nav {
   background: #E6E6E6;
-  padding: 0px 0px 0px 0px;
+  padding: 5px;
   overflow: hidden;
   line-height: 12px;  
 }
@@ -132,6 +132,7 @@ div#main-nav {
 }
 ul#home-nav {
   float: left;
+  margin-left: 30px;
 }
 ul#page-nav {
   float: right;  
@@ -165,6 +166,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;   
   line-height: 1.5em; 
   margin-bottom: 15px;
+  margin-top: 15px;
 }
 div#footer {
   background: #E6E6E6;
@@ -194,7 +196,7 @@ div.column-3 {
   box-sizing: border-box;
   width: 33%;
   min-height: 800px;
-  height: 100%;
+  height: inherit;
   display: inline-block;
   vertical-align: top;
   padding: 50px 20px;
