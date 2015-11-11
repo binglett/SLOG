@@ -34,6 +34,17 @@
 		margin-bottom: 5px;
 	}
 }
+div#hike-info {
+	padding: 30px;
+}
+div#hike-banner {
+	height: 270px;
+	width: inherit;
+	margin-bottom: 30px;
+	background-image: asset-data-url("hike-image.jpg");
+	background-size: 100%, 250px;
+	background-position: 0 30%;
+}
 table#hike_list {
 	margin: auto 0;
 	width: 100%;

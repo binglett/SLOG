@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-
+layout "login-signup"
 def create
    user = User.authenticate(params[:session][:email], params[:session][:password])
   if user

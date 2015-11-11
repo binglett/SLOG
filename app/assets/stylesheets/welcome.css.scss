@@ -9,6 +9,10 @@
   margin: 0 auto;
   padding-top: 25px;
 }
+div#login-background {
+  height: 100%;
+  background-image: asset-data-url("slog-background.jpg");
+}
 div.welcome-center {
   margin: 0 auto;
   margin-top: 80px;

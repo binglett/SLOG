@@ -3,6 +3,7 @@
 <head>
   <title><%= full_title(yield(:title)) %> </title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag	 'welcome.scss' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -12,19 +13,13 @@
 	<div id="main-nav">
 		<ul>
 			<li><h3><%= link_to 'SLOG', current_user %></h3> </li> |
-			<li><%= link_to 'Home', current_user %></li> |
-			<% if current_user %>
-       			<%= link_to "Log Out", session_path("current"), method: "delete" %> |
-				Logged in as: <%= current_user.username %> 
-			<% else %>
-			<%= link_to 'Log In', new_session_path %>
-			<% end %>
+			<li><%= link_to 'Home', current_user %></li>
 		</ul>
 	</div>
-
-	<!-- age specific starts here -->
+	<div id="login-background">
+	<!-- page specific starts here -->
 	<%= yield %>
-
+	</div>	
 </div> <!--wrapper-->
 
 <div id="footer">

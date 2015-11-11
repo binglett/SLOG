@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   layout "application"
+  layout "login-signup", :only => [:new]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   # GET /users
   # GET /users.json
@@ -16,7 +17,7 @@ class UsersController < ApplicationController
   end
 
   # GET /users/new
-  def new
+  def new    
     @user = User.new
   end
 

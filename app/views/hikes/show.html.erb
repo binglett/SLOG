@@ -1,5 +1,6 @@
 <div class="center">
 	<h1><%= @hike.name %> </h1>
+	<div id="hike-banner"></div>
 	<div id="map-container" >
 		<div id="map-canvas"></div>		
 		</br>
@@ -9,8 +10,17 @@
 		<h2>Region: </h2><p><%= @hike.region %> </p></br>
 		<h2>Rating: </h2><p><%= @hike.rating %> </p></br>
 		<h2>Difficulty: </h2><p><%= @hike.difficulty %> </p></br>
-		<h2>Distance: </h2><p><%= @hike.distance %> </p></br>
-		
+		<h2>Distance: </h2><p><%= @hike.distance %> </p></br>		
+	</div>
+	<div id="hike-info">
+		<h3>About <%= @hike.name %></h3>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultricies purus a elit viverra, a dignissim tortor sollicitudin. Donec tincidunt lectus eget dapibus elementum. Donec sit amet vulputate erat. Morbi id ligula nec metus placerat faucibus sed ac libero. Duis congue orci massa, imperdiet tempor nunc imperdiet suscipit. Sed tincidunt tempor neque, non vehicula sapien dapibus non. Quisque pellentesque, turpis eu volutpat gravida, purus dolor iaculis magna, ac egestas orci ex et est. Vivamus a luctus urna, a dapibus tellus. Nam et venenatis metus, accumsan lacinia turpis.
+			</br></br>
+			Aenean volutpat viverra vestibulum. Maecenas faucibus dui augue, id dapibus nulla consequat ac. Nunc iaculis elit erat, vitae tristique enim accumsan nec. Phasellus lobortis blandit tortor vitae pellentesque. Praesent at leo id justo convallis vulputate. Mauris quis enim at augue efficitur accumsan. Nunc vel lorem at nibh pulvinar sollicitudin vel a metus. Duis sed diam id sapien venenatis pharetra et nec ligula. Curabitur ultricies magna est. Etiam a turpis quis urna dignissim consequat quis vitae lorem.
+			</br></br>
+			Nullam lacinia, sem eu consequat auctor, dolor magna pharetra ligula, et interdum mi massa id ipsum. Quisque posuere ut urna eget porta. Nam vel diam eu diam ornare porttitor. Donec eget massa rutrum, facilisis nibh eu, ullamcorper purus. Donec porta erat nulla, nec finibus elit posuere eu. Fusce rutrum metus ut dui tempus, vitae hendrerit risus faucibus. Praesent quis justo sed erat sollicitudin facilisis ut in nunc. Morbi iaculis sem eget arcu eleifend, eu tempus nulla faucibus.
+		</p>
 	</div>
 </div>
 
