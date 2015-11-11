@@ -26,5 +26,6 @@ function loadScript() {
   script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' +
     '&libraries=drawing'+
     '&callback=initialize';
-  document.body.appendChild(script);
+  document.body.appendChild(script);  
 }
+google.maps.event.addDomListener(window, 'page:load', initialize);
