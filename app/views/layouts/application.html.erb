@@ -18,7 +18,7 @@
 				Logged in as: <%= current_user.username %>
         <%= link_to "Log Out", session_path("current"), method: "delete" %>
 			<% else %>
-			<%= link_to 'Log In', new_session_path %>
+			   <%= link_to 'Log In', new_session_path %>
 			<% end %>
 			<li><%= link_to 'User Home Panel', current_user %></li>
 		</ul>
