@@ -22,15 +22,16 @@ div#user-home-panel {
 
 }
 .feed-item {
+	padding: 10px;
+	background: #e6e6e6;
 	h4 {		
 		text-align: left;
-	}	
-	.time-stamp {
+	}		
+	margin-bottom: 30px;
+}
+.time-stamp {
 		font-style: italic;
 		font-size: 0.8em;
-		color: #e6e6e6;
-	}
-	margin-bottom: 30px;
 }
 #user-options {
 	background: #e6e6e6;
@@ -53,5 +54,8 @@ div#user-home-panel {
 	line-height: 100px;
 }
 #user-option {
+}
+.event-item {
+	
 }
 
