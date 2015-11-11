@@ -1,8 +1,8 @@
-<div class="center">
+<div id="login-center">
 
 	<h1>Sign In</h1>
 	<div class="form-space">
-		<div class="forms">
+		<div class="forms" id="signin-form">
 			<% if flash[:error] %>
 				 <p><%= flash[:error] %></p>
 			<% end %>
@@ -11,7 +11,7 @@
 				<%= f.input :password %>
 				<%= f.button :submit %>
 			<% end %>
+			<p><em>Sign in as admin</em></p>
 		</div>
 	</div>
-	<p><em>Sign in as admin</em></p>
 </div>

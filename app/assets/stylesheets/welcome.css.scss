@@ -10,6 +10,7 @@
   padding-top: 25px;
 }
 div#login-background {
+  overflow: hidden;
   height: 100%;
   background-image: asset-data-url("slog-background.jpg");
 }
@@ -46,7 +47,7 @@ div.welcome-center {
   line-height: 30px;   
 }
 div#signup-button:hover {
-  background: #99FF33;
+  background: #84AF3A;
 }
 #fb-button {
   background: #3b5998;  
@@ -72,9 +73,6 @@ div#login-button:hover {
   background: rgba(128, 128, 128, 0.8);  
 } 
 #login-button a {
-  color: grey;
-}
-#login-button a:hover {
   color: white;
 }
 div#welcome-footer{
