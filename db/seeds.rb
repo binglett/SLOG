@@ -13,12 +13,18 @@ hikes_list = [
   [ "Elk Mountain", 7000, "Fraser Valley East", 0, 2, 4 ]
 ]
 
+events_list = [
+  [ "TGIF", "Admirality Point", Date.parse("2014-1-1")]
+
+]
 hikes_list.each do |name, distance, region, grade, difficulty, rating|
   Hike.create( name: name, distance: distance, region: region, grade: grade, difficulty: difficulty, 
   					rating: rating )
 end
 
-
+events_list.each do |name, location, date|
+  Event.create( name: name, location: location, date: date )
+end
 
     # t.datetime "created_at", null: false
     # t.datetime "updated_at", null: false
