@@ -29,15 +29,3 @@ end
 events_list.each do |name, location, date|
   Event.create( name: name, location: location, date: date )
 end
-
-    # t.datetime "created_at", null: false
-    # t.datetime "updated_at", null: false
-    # t.string   "name"
-    # t.integer  "distance"
-    # t.string   "region"
-    # t.integer  "grade"
-    # t.integer  "difficulty"
-    # t.float    "rating"
-    # t.datetime "open_date"
-    # t.datetime "close_date"
-
