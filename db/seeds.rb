@@ -14,8 +14,12 @@ hikes_list = [
 ]
 
 events_list = [
-  [ "TGIF", "Admirality Point", Date.parse("2014-1-1")]
-
+  [ "TGIF", "Admirality Point", Date.parse("2015-11-1")],
+  [ "Apples", "Burnaby Lake", Date.parse("2015-12-1")],
+  [ "Elephant", "Admirality Point", Date.parse("2015-1-1")],
+  [ "Midterms are Over", "Cheam Lake Wetlands", Date.parse("2015-12-13")],
+  [ "Catching Sunrise", "Elk Mountain", Date.parse("2015-1-23")],
+  [ "3 Day Trek", "Burnaby Lake", Date.parse("2015-12-30")]
 ]
 hikes_list.each do |name, distance, region, grade, difficulty, rating|
   Hike.create( name: name, distance: distance, region: region, grade: grade, difficulty: difficulty, 

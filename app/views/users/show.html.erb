@@ -11,19 +11,19 @@
 		<div id="upcoming-events">
 			<h3>Upcoming Events</h3>
 			<div class="event-item">
-				<h4>TGIF</h4>
+				<h4><%= link_to "TGIF", controller: :events, action: :index %></h4>
 				<p class="time-stamp">2015 November 5</p>			
 				<p>Where: Elk Mountain</p>
 			</div>
 			<div class="event-item">
-				<h4>Weekend Hike</h4>
+				<h4><%= link_to "Weekend Hike", controller: :events, action: :index %></h4>
 				<p class="time-stamp">2015 December 15</p>			
 				<p>Where: Elephant Lake</p>
 			</div>
 		</div>
 	</div>
 	<div class="column-2-3" >
-		<h3>Your Hikes</h3>
+		<h3>Your Hikes (Please refresh to see map!)</h3>
 		<div id="user-map-container">			
 			<div id="map-canvas"></div>	
 		</div>		
@@ -31,12 +31,12 @@
 		</br>
 		<h3>Events Happening Near You</h3>
 		<div class="feed-item">
-			<h4>Catch the Sunrise!</h4>
+			<h4><%= link_to "Catch the Sunrise", controller: :events, action: :index %></h4>
 			<p>Is anyone interested in a midnight hike to Candy Mountain?</p>
 			<p class="time-stamp">2015 November 3 | </p>			
 		</div>
 		<div class="feed-item">
-			<h4>New to Hiking</h4>
+			<h4><%= link_to "Weekend Hike", controller: :events, action: :index %></h4>
 			<p>A group of us newbies were planning to go up to Quiet Hill, anyone is welcome to join! All levels welcome!</p>
 			<p class="time-stamp">2015 November 5 | </p>			
 		</div>
