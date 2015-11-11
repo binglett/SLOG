@@ -2,13 +2,15 @@
 	<h1><%= @hike.name %> </h1>
 	<div id="map-container" >
 		<div id="map-canvas"></div>		
+		</br>
+		*Please refresh browser to see map
 	</div>
 	<div class="column-2" id="hike-show" >		
 		<h2>Region: </h2><p><%= @hike.region %> </p></br>
 		<h2>Rating: </h2><p><%= @hike.rating %> </p></br>
 		<h2>Difficulty: </h2><p><%= @hike.difficulty %> </p></br>
 		<h2>Distance: </h2><p><%= @hike.distance %> </p></br>
-		<p>If open all season, i.e. no open_date, close_date</p>
+		
 	</div>
 </div>
 
