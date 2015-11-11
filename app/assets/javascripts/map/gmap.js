@@ -1,8 +1,10 @@
 $(window).load(function() {
+  
   loadScript();
 });
 
 var map;
+
 
 function initialize() {
         
@@ -20,7 +22,7 @@ function initialize() {
 }
 
 function loadScript() {
-	console.log("map loading ...");
+  console.log("map loading ...");
   var script = document.createElement('script');
   script.type = 'text/javascript';
   script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' +
@@ -28,4 +30,3 @@ function loadScript() {
     '&callback=initialize';
   document.body.appendChild(script);  
 }
-google.maps.event.addDomListener(window, 'page:load', initialize);
