@@ -3,15 +3,19 @@
 	<p id="notice"><%= notice %></p>
 	<div class="column-3" id="user-info">		
 		<h2><%= @user.username %></h2>	
-		<%= image_tag("logo_placeholder.png") %>
-		<p>Region: Vancouver (replace)</p>
+		<%= image_tag("SLOGo.png") %>
+		<p>Region: Vancouver </p>
 		<p>Badges: * * * </p>
 		<p>Hikes Done: 7</p>
-		<p>Groups: 4</p>
-		<p><%= link_to('Sign Out', session_path, :method => :delete) %></p>
+		<p>Groups: 4</p>		
 	</div>
-
-	<div class="column-3" id="user-feed">
+	<div class="column-2-3" >
+		<h3>Your Hikes</h3>
+		<div id="user-map-container">			
+			<div id="map-canvas"></div>	
+		</div>		
+	</div>
+<!-- 	<div class="column-3" id="user-feed">
 		<div class="feed-item">
 			<h4>Hey there I am a feed.</h4>
 			<p>Some feed goes here. I am not sure what will go here right now. Sample text will be the same for each user?</p>
@@ -31,7 +35,7 @@
 			<li><h2><%= link_to 'Forums', user_path %></h2></li>
 			<li><h2><%= link_to 'Groups', user_path %></h2></li>
 		</ul>
-	</div>
+	</div> -->
 
 </div>
 
