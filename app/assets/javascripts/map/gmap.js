@@ -18,7 +18,7 @@ function initialize() {
         };
         // initializing map with mapOptions
         map = new google.maps.Map(document.getElementById("map-canvas"),mapOptions);
-
+        
         var infoWindow = new google.maps.InfoWindow({map: map});
 
         // Try HTML5 geolocation.
@@ -39,7 +39,7 @@ function initialize() {
           // Browser doesn't support Geolocation
           handleLocationError(false, infoWindow, map.getCenter());
         }
-      }
+      
 
       function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         infoWindow.setPosition(pos);
