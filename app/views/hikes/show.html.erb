@@ -1,5 +1,5 @@
+<h1><%= @hike.name %> </h1>
 <div class="center">
-	<h1><%= @hike.name %> </h1>
 	<div id="hike-banner"></div>
 	<div id="map-container" >
 		<div id="map-canvas"></div>		
@@ -10,7 +10,7 @@
 		<h2>Region: </h2><p><%= @hike.region %> </p></br>
 		<h2>Rating: </h2><p><%= @hike.rating %> </p></br>
 		<h2>Difficulty: </h2><p><%= @hike.difficulty %> </p></br>
-		<h2>Distance: </h2><p><%= @hike.distance %> </p></br>		
+		<h2>Distance: </h2><p><%= @hike.distance %>km </p></br>		
 	</div>
 	<div id="hike-info">
 		<h3>About <%= @hike.name %></h3>
@@ -23,15 +23,3 @@
 		</p>
 	</div>
 </div>
-
-<!-- 
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "name"
-    t.integer  "distance"
-    t.string   "region"
-    t.integer  "grade"
-    t.integer  "difficulty"
-    t.float    "rating"
-    t.datetime "open_date"
-    t.datetime "close_date" -->

@@ -46,9 +46,13 @@ div#hike-banner {
 	background-position: 0 30%;
 }
 table#hike_list {
-	margin: auto 0;
-	width: 100%;
+	text-align: left;
+	margin: auto 0;	
+}
+td, th {
+	padding-left: 10px;
+	padding-right: 10px;
 }
 td a {
-  text-decoration: underline;
+	text-decoration: underline;	
 }

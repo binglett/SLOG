@@ -1,5 +1,4 @@
-$(window).load(function() {
-  
+$(window).load(function() {  
   loadScript();
 });
 
@@ -39,7 +38,6 @@ function initialize() {
           // Browser doesn't support Geolocation
           handleLocationError(false, infoWindow, map.getCenter());
         }
-      
 
       function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         infoWindow.setPosition(pos);
@@ -56,5 +54,5 @@ function loadScript() {
   script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' +
     '&libraries=drawing'+
     '&callback=initialize';
-  document.body.appendChild(script);  
+  document.body.appendChild(script); 
 }

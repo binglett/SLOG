@@ -87,7 +87,7 @@ hikes_list = [
   [ "Mount Seymour", 9, "The North Shore", 2 ],
   [ "Mount Strachan", 10.5, "The North Shore", 2 ],
   [ "Mount Thom", 10, "Fraser Valley East", 2 ],
-  [ "Mundy Park", 6, "Tri Cities",  ],
+  [ "Mundy Park", 6, "Tri Cities", 1 ],
   [ "Mystery Lake", 3, "The North Shore", 1 ],
   [ "Nairn Falls", 3, "Pemberton", 1 ],
   [ "Norvan Falls", 14, "The North Shore", 2 ],
@@ -133,7 +133,8 @@ events_list = [
   [ "Midterms are Over", "Cheam Lake Wetlands", Date.parse("2015-12-13")],
   [ "Catching Sunrise", "Elk Mountain", Date.parse("2015-1-23")],
   [ "3 Day Trek", "Burnaby Lake", Date.parse("2015-12-30")]
-]
+] 
+
 hikes_list.each do |name, distance, region, difficulty|
   Hike.create( name: name, distance: distance, region: region, difficulty: difficulty)
 end

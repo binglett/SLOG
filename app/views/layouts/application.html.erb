@@ -14,7 +14,7 @@
 		<ul id="home-nav">
 			<li><h3><%= link_to 'SLOG', current_user %></h3> </li> |
 			<% if current_user %>
-				<li><%= link_to 'Home', current_user %></li> |		
+				<li><%= link_to 'Home', current_user, 'data-no-turbolink' => true %></li> |		
 			<% end %>
 			<li><%= link_to 'View Hikes', :controller => :hikes, :action => :index   %></li> |
 			<li><%= link_to 'Events', :controller => :events, :action => :index    %></li>				
