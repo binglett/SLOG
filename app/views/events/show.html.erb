@@ -17,6 +17,14 @@
 	  <strong>Date:</strong>
 	  <%= @event.date %>
 	</p>
+	
+	<p>
+	  <strong>Hike:</strong>
+	  <%=
+	  @hike = Hike.find_by_id(@event.hike_id) 
+	  link_to @hike.name, hike_path(@event.hike_id, :lat => @hike.lat, :lng => @hike.lng), 'data-no-turbolink' => true 
+	  %>
+	</p>
 
 	<%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>

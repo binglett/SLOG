@@ -5,6 +5,7 @@
 	    <%= f.input :name %>
 	    <%= f.input :location %>
 	    <%= f.input :date %>
+	    <%= collection_select(:event, :hike_id, Hike.all, :id, :name, options = {:prompt => 'Please select a Hike'}) %>
 	  </div>
 
 	  <div class="form-actions">
