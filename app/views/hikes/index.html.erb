@@ -16,11 +16,11 @@
     <tbody>
       <% @hikes.each do |hike| %>
         <tr>
-          <td><%= link_to hike.name, hike, 'data-no-turbolink' => true %></td>
+          <td><%= link_to hike.name, hike_path(hike, :lat => hike.lat, :lng => hike.lng), 'data-no-turbolink' => true %></td>
           <td><%= hike.distance %> km</td>
           <td><%= hike.region %></td>
           <td><%= hike.difficulty %></td>   
-          <td><%= hike.rating.presence || 'no rating available' %></td>       
+          <td><%= hike.rating.presence || 'no rating available' %></td>     
   <!--         <td><%= link_to 'Edit', edit_hike_path(hike) %></td>
           <td><%= link_to 'Destroy', hike, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
         </tr>
@@ -30,5 +30,3 @@
   <p><em>Route information courtesy of <%= link_to 'Vancouver Trails', "http://www.vancouvertrails.com/trails/" %></em></p>
 </div>
 <br>
-
-<!-- <%= link_to 'New Hike', new_hike_path %> -->
