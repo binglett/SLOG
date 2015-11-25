@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   resources :events
   resources :hikes
   get 'social/social_list'
-
+  get "weather/weatherhome"
+  
   resources :users
   get "sign up" => "users#new", :as => "sign_up"
   # The priority is based upon order of creation: first created -> highest priority.
