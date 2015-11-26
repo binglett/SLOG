@@ -32,7 +32,7 @@ gem 'bootstrap-sass'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
-
+gem 'httparty'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
