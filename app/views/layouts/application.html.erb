@@ -12,12 +12,18 @@
 <div id="wrapper">
 	<div id="main-nav">
 		<ul id="home-nav">
-			<li><h3><%= link_to 'SLOG', current_user %></h3> </li> |
+			<li><%= image_tag("SLOGo.png") %></li>
 			<% if current_user %>
+				<li><h3><%= link_to 'SLOG', current_user %></h3> </li> |
 				<li><%= link_to 'Home', current_user, 'data-no-turbolink' => true %></li> |		
 				<li><%= link_to 'View Hikes', :controller => :hikes, :action => :index   %></li> |
 				<li><%= link_to 'Events', :controller => :events, :action => :index    %></li>				
-			<% end %>
+				<% elsif (params[:action] == 'show' )%>
+				<li><h3><%= link_to 'SLOG', root_path %></h3> </li> 
+				<li><%= link_to 'Back to View All Hikes', :controller => :hikes, :action => :index   %></li> 
+				<% else %>
+				<li><h3><%= link_to 'SLOG', root_path %></h3> </li> 
+			<% end %>			
 		</ul>
 		<ul id="page-nav">
 			<% if current_user %>

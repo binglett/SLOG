@@ -6,9 +6,9 @@
 				    <%= f.input :name %> </br>
 				    <%= f.input :location %> </br>
 				    <%= f.input :date %> </br>
-				    Hike 
+				    <%= f.label :hike %>
 				    <%= collection_select(:event, :hike_id, Hike.all, :id, :name, options = {:prompt => 'Please select a Hike'}) %> </br></br>
-				    <%= f.button :submit %>
+					<%= f.button :submit %>
 			<% end %>
 		</div>
     </div>
