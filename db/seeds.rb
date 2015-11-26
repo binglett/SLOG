@@ -127,18 +127,18 @@ hikes_list = [
 ]
 
 events_list = [
-  [ "TGIF", "Admirality Point", Date.parse("2015-11-1")],
-  [ "Apples", "Burnaby Lake", Date.parse("2015-12-1")],
-  [ "Elephant", "Admirality Point", Date.parse("2015-1-1")],
-  [ "Midterms are Over", "Cheam Lake Wetlands", Date.parse("2015-12-13")],
-  [ "Catching Sunrise", "Elk Mountain", Date.parse("2015-1-23")],
-  [ "3 Day Trek", "Burnaby Lake", Date.parse("2015-12-30")]
+  [ "TGIF", "Admirality Point", Date.parse("2015-11-1"), 1 ],
+  [ "Apples", "Burnaby Lake", Date.parse("2015-12-1"), 1 ],
+  [ "Elephant", "Admirality Point", Date.parse("2015-1-1"), 1 ],
+  [ "Midterms are Over", "Cheam Lake Wetlands", Date.parse("2015-12-13"), 1 ],
+  [ "Catching Sunrise", "Elk Mountain", Date.parse("2015-1-23"), 1 ],
+  [ "3 Day Trek", "Burnaby Lake", Date.parse("2015-12-30"), 1 ]
 ] 
 
 hikes_list.each do |name, distance, region, difficulty, lat, lng|
   Hike.create( name: name, distance: distance, region: region, difficulty: difficulty, lat: lat, lng: lng)
 end
 
-events_list.each do |name, location, date|
-  Event.create( name: name, location: location, date: date )
+events_list.each do |name, location, date, hike_id|
+  Event.create( name: name, location: location, date: date, hike_id: hike_id )
 end

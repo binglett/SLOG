@@ -1,16 +1,17 @@
-<%= simple_form_for(@event) do |f| %>
-  <%= f.error_notification %>
-<div class="forms">
-	  <div class="form-inputs">
-	    <%= f.input :name %>
-	    <%= f.input :location %>
-	    <%= f.input :date %>
-	    <%= collection_select(:event, :hike_id, Hike.all, :id, :name, options = {:prompt => 'Please select a Hike'}) %>
-	  </div>
-
-	  <div class="form-actions">
-	    <%= f.button :submit %>
-	  </div>
-	
+<div class="center">
+	<div class="form-space">
+		<div class="form-container">
+			<%= simple_form_for(@event) do |f| %>
+			  <%= f.error_notification %>
+				    <%= f.input :name %> </br>
+				    <%= f.input :location %> </br>
+				    <%= f.input :date %> </br>
+				    Hike 
+				    <%= collection_select(:event, :hike_id, Hike.all, :id, :name, options = {:prompt => 'Please select a Hike'}) %> </br></br>
+				    <%= f.button :submit %>
+			<% end %>
+		</div>
+    </div>
 </div>
-<% end %>
+    
+

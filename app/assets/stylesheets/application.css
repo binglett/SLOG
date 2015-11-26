@@ -148,6 +148,10 @@ div.center {
   background: #E6E6E6; /* temp */
   border-radius: 4px;
 }
+div.centering {
+  margin: 0 auto;
+  width: 90%;
+}
 div#login-center {
   margin: 0 auto;
   margin-bottom: 80px;
@@ -260,4 +264,7 @@ div.column-2-3 {
   padding: 3px 10px;  
 }
 
+.form_inputs div.input {
+  margin: 5px;
+}
 

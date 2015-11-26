@@ -1,31 +1,23 @@
-<h1>Event</h1>
+<h1><%= @event.name %></h1>
 <div class="center">
 		
 	<p id="notice"><%= notice %></p>
-
-	<p>
-	  <strong>Name:</strong>
-	  <%= @event.name %>
-	</p>
-
-	<p>
-	  <strong>Location:</strong>
-	  <%= @event.location %>
-	</p>
-
-	<p>
-	  <strong>Date:</strong>
-	  <%= @event.date %>
-	</p>
-	
-	<p>
-	  <strong>Hike:</strong>
-	  <%=
-	  @hike = Hike.find_by_id(@event.hike_id) 
-	  link_to @hike.name, hike_path(@event.hike_id, :lat => @hike.lat, :lng => @hike.lng), 'data-no-turbolink' => true 
-	  %>
-	</p>
-
-	<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+	<h3><%= days_left( DateTime.now.to_date, @event.date.to_date ) %> </h3>
+	<div class="centering">
+		<p> <strong>Date:</strong> <%= @event.date.to_date.to_formatted_s(:long_ordinal) %> </p>
+	 	<p> <strong>Time:</strong> <%= @event.date.to_s(:time) %></p>
+		<p>
+		  <strong>Location:</strong>	  
+		  <%=
+		  	@hike = Hike.find_by_id(@event.hike_id) 
+		  	link_to @hike.name, hike_path(@event.hike_id, :lat => @hike.lat, :lng => @hike.lng), 'data-no-turbolink' => true 
+		  %>
+		</p>
+		<div id="user-map-container">
+			<div id="map-canvas"></div>
+		</div>
+		</br></br></br>
+		<%= link_to 'Edit', edit_event_path(@event) %> |
+		<%= link_to 'Back', events_path %>
+	</div>
 </div>
