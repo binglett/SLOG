@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   layout "application"
-  layout "login-signup", :only => [:new]
+  layout "login-signup", :only => [:new, :update]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   # GET /users
   # GET /users.json
