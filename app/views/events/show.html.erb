@@ -6,8 +6,9 @@
 	<div class="centering">
 		<p> <strong>Date:</strong> <%= @event.date.to_date.to_formatted_s(:long_ordinal) %> </p>
 	 	<p> <strong>Time:</strong> <%= @event.date.to_s(:time) %></p>
+	 	<p> <strong>Meet up Location:</strong> <%= @event.location %></p>
 		<p>
-		  <strong>Location:</strong>	  
+		  <strong>Hike:</strong>	  
 		  <%=
 		  	@hike = Hike.find_by_id(@event.hike_id) 
 		  	link_to @hike.name, hike_path(@event.hike_id, :lat => @hike.lat, :lng => @hike.lng), 'data-no-turbolink' => true 
