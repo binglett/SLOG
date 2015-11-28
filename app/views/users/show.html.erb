@@ -9,7 +9,7 @@
 		<p>Hikes Done: 7</p>
 		<p>Groups: 4</p>
 
-		#weather_lookup
+
 		<h4>My Personal Weather Lookup</h4>
 		<p>It is <%= @weather_lookup.temperature %> degrees in Vancouver,BC! </p>
 		<%= image_tag @weather_lookup.icon %>
@@ -28,7 +28,6 @@
 		</div>
 	</div>
 
-	#Map
 	<div class="column-2-3" >
 		<h3>Your Hikes</h3>
 		<div id="user-map-container">
@@ -37,7 +36,7 @@
 		</br></br>
 		</br>
 
-		#Micrposts
+
 		<div class="feed-item">
 	 	<% if @user.microposts.any? %>
 		 <h3>Microposts (<%= @user.microposts.count %>)</h3>
