@@ -8,6 +8,8 @@
 		<p>Badges: * * * </p>
 		<p>Hikes Done: 7</p>
 		<p>Groups: 4</p>
+
+		#weather_lookup
 		<h4>My Personal Weather Lookup</h4>
 		<p>It is <%= @weather_lookup.temperature %> degrees in Vancouver,BC! </p>
 		<%= image_tag @weather_lookup.icon %>
@@ -25,6 +27,8 @@
 			</div>
 		</div>
 	</div>
+
+	#Map
 	<div class="column-2-3" >
 		<h3>Your Hikes</h3>
 		<div id="user-map-container">
@@ -32,17 +36,8 @@
 		</div>
 		</br></br>
 		</br>
-		<h3>Events Happening Near You</h3>
-		<div class="feed-item">
-			<h4><%= link_to "Catch the Sunrise", controller: :events, action: :index %></h4>
-			<p>Is anyone interested in a midnight hike to Candy Mountain?</p>
-			<p class="time-stamp">2015 November 3 | </p>
-		</div>
-		<div class="feed-item">
-			<h4><%= link_to "Weekend Hike", controller: :events, action: :index %></h4>
-			<p>A group of us newbies were planning to go up to Quiet Hill, anyone is welcome to join! All levels welcome!</p>
-			<p class="time-stamp">2015 November 5 | </p>
-		</div>
+
+		#Micrposts
 		<div class="feed-item">
 	 	<% if @user.microposts.any? %>
 		 <h3>Microposts (<%= @user.microposts.count %>)</h3>
@@ -51,6 +46,23 @@
 		 </ol>
 		 <%= will_paginate @microposts %>
 	 	<% end %>
+  		<div class="row">
+    		<aside class="col-md-4">
+      		<section class="user_info">
+						<h1><%= current_user.username %></h1>
+							<span><%= link_to "view my profile", current_user %></span>
+							<span><%= pluralize(current_user.microposts.count, "micropost") %></span>
+      		</section>
+      		<section class="micropost_form">
+						<%= simple_form_for(:micropost, :url =>microposts_path)  do |f| %>
+  						<div class="field">
+    						<%= f.text_area :content, placeholder: "Compose new micropost..." %>
+  						</div>
+  						<%= f.submit "Post", class: "btn btn-primary" %>
+						<% end %>
+      		</section>
+    		</aside>
+  		</div>
  		</div>
 	</div>
 <!-- 	<div class="column-3" id="user-feed">
