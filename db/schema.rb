@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151124005809) do
+ActiveRecord::Schema.define(version: 20151128072730) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,15 @@ ActiveRecord::Schema.define(version: 20151124005809) do
     t.float    "lng"
   end
 
+  create_table "microposts", force: :cascade do |t|
+    t.text     "content"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "microposts", ["user_id"], name: "index_microposts_on_user_id", using: :btree
+
   create_table "sessions", force: :cascade do |t|
     t.string   "session_id", null: false
     t.text     "data"
@@ -54,7 +63,6 @@ ActiveRecord::Schema.define(version: 20151124005809) do
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.string   "username"
-    t.string   "pw"
     t.boolean  "verified"
     t.string   "email"
     t.string   "encrypted_password"
@@ -62,4 +70,5 @@ ActiveRecord::Schema.define(version: 20151124005809) do
     t.string   "type"
   end
 
+  add_foreign_key "microposts", "users"
 end
