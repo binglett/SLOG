@@ -133,7 +133,7 @@ events_list = [
   [ "Midterms are Over", "Cheam Lake Wetlands", Date.parse("2015-12-13"), 1 ],
   [ "Catching Sunrise", "Elk Mountain", Date.parse("2015-1-23"), 1 ],
   [ "3 Day Trek", "Burnaby Lake", Date.parse("2015-12-30"), 1 ]
-] 
+]
 
 hikes_list.each do |name, distance, region, difficulty, lat, lng|
   Hike.create( name: name, distance: distance, region: region, difficulty: difficulty, lat: lat, lng: lng)
@@ -141,4 +141,24 @@ end
 
 events_list.each do |name, location, date, hike_id|
   Event.create( name: name, location: location, date: date, hike_id: hike_id )
+end
+
+User.create!(username:  "Example_User",
+             email: "admin@FDISSEET.com",
+             password:              "foobar",
+             password_confirmation: "foobar")
+
+99.times do |n|
+  username  = Faker::Name.name
+  email = "example-#{n+1}@fake.org"
+  password = "password"
+  User.create!(username:  username,
+    email: email,
+    password:              password,
+    password_confirmation: password)
+  end
+users = User.order(:created_at).take(6)
+50.times do
+  content = Faker::Lorem.sentence(5)
+  users.each { |user| user.microposts.create!(content: content) }
 end
