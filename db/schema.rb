@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(version: 20151128072730) do
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.string   "username"
+    t.string   "pw"
     t.boolean  "verified"
     t.string   "email"
     t.string   "encrypted_password"

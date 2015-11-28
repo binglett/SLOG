@@ -15,8 +15,11 @@
 
     <tbody>
       <% @events.each do |event| %>
-        <tr>
-          <td><%= link_to event.name, event %></td>
+        <tr> 
+          <td><%=
+		  	@hike = Hike.find_by_id(event.hike_id) 
+		  	link_to event.name, event_path(event, :lat => @hike.lat, :lng => @hike.lng), 'data-no-turbolink' => true 
+		  %></td>
           <td><%= event.date %></td>
           <td> </td>
           <td><%= event.location %></td>
