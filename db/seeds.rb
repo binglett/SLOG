@@ -147,7 +147,7 @@ User.create!(username:  "Example_User",
              email: "admin@FDISSEET.com",
              password:              "foobar",
              password_confirmation: "foobar")
-
+#
 99.times do |n|
   username  = Faker::Name.name
   email = "example-#{n+1}@fake.org"
