@@ -1,8 +1,8 @@
 <% provide(:title, "Congratulations! You are now a SLOG!") %>
 <div id="user-home-panel">
 	<p id="notice"><%= notice %></p>
-	<div class="column-3" id="user-info">		
-		<h2><%= @user.username %></h2>	
+	<div class="column-3" id="user-info">
+		<h2><%= @user.username %></h2>
 		<%= image_tag("SLOGo.png") %>
 		<p>Region: Vancouver </p>
 		<p>Badges: * * * </p>
@@ -10,50 +10,59 @@
 		<p>Groups: 4</p>
 		<h4>My Personal Weather Lookup</h4>
 		<p>It is <%= @weather_lookup.temperature %> degrees in Vancouver,BC! </p>
-		<%= image_tag @weather_lookup.icon %>	
+		<%= image_tag @weather_lookup.icon %>
 		<div id="upcoming-events">
 			<h3>Upcoming Events</h3>
 			<div class="event-item">
 				<h4><%= link_to "TGIF", controller: :events, action: :index %></h4>
-				<p class="time-stamp">2015 November 5</p>			
+				<p class="time-stamp">2015 November 5</p>
 				<p>Where: Elk Mountain</p>
 			</div>
 			<div class="event-item">
 				<h4><%= link_to "Weekend Hike", controller: :events, action: :index %></h4>
-				<p class="time-stamp">2015 December 15</p>			
+				<p class="time-stamp">2015 December 15</p>
 				<p>Where: Elephant Lake</p>
 			</div>
 		</div>
 	</div>
 	<div class="column-2-3" >
 		<h3>Your Hikes</h3>
-		<div id="user-map-container">			
-			<div id="map-canvas"></div>	
-		</div>		
+		<div id="user-map-container">
+			<div id="map-canvas"></div>
+		</div>
 		</br></br>
 		</br>
 		<h3>Events Happening Near You</h3>
 		<div class="feed-item">
 			<h4><%= link_to "Catch the Sunrise", controller: :events, action: :index %></h4>
 			<p>Is anyone interested in a midnight hike to Candy Mountain?</p>
-			<p class="time-stamp">2015 November 3 | </p>			
+			<p class="time-stamp">2015 November 3 | </p>
 		</div>
 		<div class="feed-item">
 			<h4><%= link_to "Weekend Hike", controller: :events, action: :index %></h4>
 			<p>A group of us newbies were planning to go up to Quiet Hill, anyone is welcome to join! All levels welcome!</p>
-			<p class="time-stamp">2015 November 5 | </p>			
+			<p class="time-stamp">2015 November 5 | </p>
 		</div>
+		<div class="col-md-8">
+	 	<% if @user.microposts.any? %>
+		 <h3>Microposts (<%= @user.microposts.count %>)</h3>
+		 <ol class="microposts">
+			 <%= render @microposts %>
+		 </ol>
+		 <%= will_paginate @microposts %>
+	 	<% end %>
+ 		</div>
 	</div>
 <!-- 	<div class="column-3" id="user-feed">
 		<div class="feed-item">
 			<h4>Hey there I am a feed.</h4>
 			<p>Some feed goes here. I am not sure what will go here right now. Sample text will be the same for each user?</p>
-			<p class="time-stamp">2015 Novemeber 5 | </p>			
+			<p class="time-stamp">2015 Novemeber 5 | </p>
 		</div>
 		<div class="feed-item">
 			<h4>I am another feed item.</h4>
 			<p>Perhaps upcoming events? Public events? New hikes that have been added to the archive?</p>
-			<p class="time-stamp">2015 Novemeber 5 | </p>			
+			<p class="time-stamp">2015 Novemeber 5 | </p>
 		</div>
 	</div>
 
@@ -67,5 +76,3 @@
 	</div> -->
 
 </div>
-
-
