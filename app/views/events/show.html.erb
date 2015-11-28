@@ -13,6 +13,7 @@
 		  	@hike = Hike.find_by_id(@event.hike_id) 
 		  	link_to @hike.name, hike_path(@event.hike_id, :lat => @hike.lat, :lng => @hike.lng), 'data-no-turbolink' => true 
 		  %>
+		 <p> <strong>Current Weather: </strong> <%= @weather_lookup.temperature %> °F at <%= @event.location %></p>
 		</p>
 		<div id="event-map-container">
 			<div id="map-canvas"></div>
