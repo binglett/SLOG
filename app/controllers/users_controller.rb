@@ -14,6 +14,7 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
       @user=User.find(params[:id])
+      @weather_lookup = WeatherLookup.new
   end
 
   # GET /users/new
@@ -65,6 +66,8 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+ 
 
   private
     # Use callbacks to share common setup or constraints between actions.
