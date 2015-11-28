@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @user = User.all
+    @users = User.paginate(page: params[:page])
     @hike = Hike.all
     @event = Event.all
   end
@@ -14,11 +14,11 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
       @user=User.find(params[:id])
-      @weather_lookup = WeatherLookup.new
+      @microposts = @user.microposts.paginate(page: params[:page])
   end
 
   # GET /users/new
-  def new    
+  def new
     @user = User.new
   end
 
@@ -66,8 +66,6 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
-
- 
 
   private
     # Use callbacks to share common setup or constraints between actions.
