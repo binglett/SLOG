@@ -4,8 +4,11 @@ class MicropostsController < ApplicationController
   def create
     @micropost = current_user.microposts.build(micropost_params)
     if @micropost.save
-      flash[:success] = "Micropost created!"
       redirect_to :back
+      flash[:success] = "Micropost created!"
+    else
+      redirect_to :back
+      flash[:failure] = "Micropost failed!"
     end
   end
 
