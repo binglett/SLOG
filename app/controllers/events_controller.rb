@@ -62,6 +62,14 @@ class EventsController < ApplicationController
     end
   end
 
+ def join
+    #  respond_to do |format|
+    # @event.update(event.user_participating) 
+    #     format.html { redirect_to @event, notice: 'Joined.' }
+    #     format.json { render :show, status: :ok, location: @event }
+     # end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_event
@@ -70,6 +78,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:name, :location, :date, :hike_id)
+      params.require(:event).permit(:name, :location, :date, :hike_id, :user_participating)
     end
 end
