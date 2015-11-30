@@ -33,5 +33,27 @@ class UserTest < ActiveSupport::TestCase
 		assert_not @user.valid?
 	end
 
+	#test username does not contain strange characters
+	#could use a foreach loop?
+
+	test "username does not contain }" do
+		@user.username = "}"
+		assert_not @user.valid?
+	end
+
+	test "username does not contain {" do
+		@user.username = "{"
+		assert_not @user.valid?
+	end
+
+	test "username does not contain ;" do
+		@user.username = ";"
+		assert_not @user.valid?
+	end
+
+	test "username does not contain :" do
+		@user.username = ":"
+		assert_not @user.valid?
+	end
 
 end
