@@ -5,6 +5,10 @@ class HikeTest < ActiveSupport::TestCase
   #   assert true
   # end
 
+  setup do
+    @hike = hikes(:one)
+  end
+ 
   test "name not null" do
   	@hike.name = nil
   	assert_not @hike.valid?

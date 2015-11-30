@@ -2,6 +2,10 @@ require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
   
+	setup do
+    @user = users(:one)
+  end
+	
 	test "username not null" do
 		@user.username = nil
 		assert_not @user.valid?
