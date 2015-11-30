@@ -38,13 +38,14 @@
 
 		<div class="feed-item">
 	 	<% if @user.microposts.any? %>
-		 <h3>My Message Board: (<%= @user.microposts.count %>)</h3>
+		 <h3>BLOG: (<%= @user.microposts.count %>)</h3>
 		 <ol class="microposts">
 			 <%= render @microposts %>
 		 </ol>
 		 <%= will_paginate @microposts %>
 	 	<% end %>
 	 	</br></br></br>
+		<% if current_user?(User.find(params[:id])) %>
   		<div class="row">
     		<aside class="col-md-4">
 <!--       		<section class="user_info">
@@ -52,7 +53,7 @@
 							<span><%= link_to "view my profile", current_user %></span>
 							<span><%= pluralize(current_user.microposts.count, "micropost") %></span>
       		</section> -->
-      		<h3>BLOG</h3>
+      		<h3>Update</h3>
       		<section class="micropost_form">
 						<%= simple_form_for(:micropost, :url =>microposts_path)  do |f| %>
   						<div class="field">
@@ -60,11 +61,11 @@
   						</div>
   						</br>
   						<%= f.button :submit, "Post" %>
-						
 						<% end %>
       		</section>
     		</aside>
   		</div>
+			<% end %>
  		</div>
 	</div>
 <!-- 	<div class="column-3" id="user-feed">
