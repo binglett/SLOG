@@ -11,7 +11,7 @@
 
 		</br>
 		<h3>Current Weather</h3>
-		<p>It is <%= @weather_lookup.temperature %>°F degrees in Vancouver, BC!</p>
+		<p>It is <%= to_celcius(@weather_lookup.temperature) %>°C degrees in Vancouver, BC!</p>
 		<%= image_tag @weather_lookup.icon %>
 		<div id="upcoming-events">
 			<h3>Upcoming Events</h3>
