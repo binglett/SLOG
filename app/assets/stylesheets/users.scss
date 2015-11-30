@@ -1,6 +1,22 @@
 ///////////
 /* User */
 ///////////
+#user-map-container {  
+  height: 500px; 
+  width: 50%;
+  border-radius: 16px 16px; 
+  border-color: #fff; 
+  border-style: solid; 
+  box-shadow: 2px 2px 10px #B1B1B1; 
+  border-width: 7px; 
+  display: inline-block;  
+}
+
+#user-map-canvas {
+  height: 445px;
+  width: 100%
+}
+
 div#user-home-panel {
 	width: 100%;
 	margin: auto 0;

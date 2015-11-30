@@ -28,25 +28,54 @@ var QueryString = function () {
 var map;
 
 function initialize() {
-  var glat = parseFloat(QueryString.lat);
-  var glng = parseFloat(QueryString.lng);
-        
-  var mapOptions = {
-          center: { lat: glat, lng: glng },
-          zoom: 15,          
-          mapTypeId: google.maps.MapTypeId.TERRAIN,
-          panControl: true,
-          scaleControl: true,
-          streetViewControl: true,
-          overviewMapControl: true
-        };
-	// initializing map with mapOptions
-    map = new google.maps.Map(document.getElementById("map-canvas"),mapOptions);
-        
-    var marker = new google.maps.Marker({
-		position: { lat: glat, lng: glng },
-		map: map
-	});
+  if(location.search.indexOf('lat=')>=0 && location.search.indexOf('lng=')>=0){
+	  var glat = parseFloat(QueryString.lat);
+	  var glng = parseFloat(QueryString.lng);
+	        
+	  var mapOptions = {
+	          center: { lat: glat, lng: glng },
+	          zoom: 15,          
+	          mapTypeId: google.maps.MapTypeId.TERRAIN,
+	          panControl: true,
+	          scaleControl: true,
+	          streetViewControl: true,
+	          overviewMapControl: true
+	        };
+		// initializing map with mapOptions
+	    map = new google.maps.Map(document.getElementById("map-canvas"),mapOptions);
+	        
+	    var marker = new google.maps.Marker({
+			position: { lat: glat, lng: glng },
+			map: map
+		});
+	}else{
+		var mapOptions = {
+	          center: { lat: 49.3985858, lng: -122.725777 },
+	          zoom: 9,          
+	          mapTypeId: google.maps.MapTypeId.TERRAIN,
+	          panControl: true,
+	          scaleControl: true,
+	          streetViewControl: true,
+	          overviewMapControl: true
+	        };
+		// initializing map with mapOptions
+	    map = new google.maps.Map(document.getElementById("user-map-canvas"),mapOptions);
+	    
+	    var marker1 = new google.maps.Marker({
+			position: { lat: 49.2985858, lng: -122.925777 },
+			map: map
+		});
+		
+		var marker2 = new google.maps.Marker({
+			position: { lat: 49.013004, lng: -122.458147 },
+			map: map
+		});
+		
+		var marker3 = new google.maps.Marker({
+			position: { lat: 49.670495, lng: -123.126277 },
+			map: map
+		});
+	}
 }
 
 
