@@ -17,7 +17,7 @@
 		</p>
 		<div id="event-map-container">
 			<div id="map-canvas"></div>
-<br>
+<!-- <br>
 <div class="container">
  <h2>Enter Username To Join</h2>
   <form class="form-horizontal" role="form">
@@ -34,11 +34,12 @@
     </div>
   </form>
 </div>
-</br>
+</br> -->
 
 		</div>
 		</br></br></br>
 		
+		<%= button_to 'Attend', attend_index_path %>
 		<%= link_to 'Edit', edit_event_path(@event) %> |
 		<%= link_to 'Back', events_path %>
 	</div>

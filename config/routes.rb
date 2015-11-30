@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'attend/new'
+  get 'attend/delete'
+  get 'attend/index'
+  get 'attend/create'
+
   resources :events
   resources :hikes
   get 'social/social_list'
