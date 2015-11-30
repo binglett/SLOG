@@ -52,7 +52,7 @@
 							<span><%= link_to "view my profile", current_user %></span>
 							<span><%= pluralize(current_user.microposts.count, "micropost") %></span>
       		</section> -->
-      		<h3>Post a Message</h3>
+      		<h3>BLOG</h3>
       		<section class="micropost_form">
 						<%= simple_form_for(:micropost, :url =>microposts_path)  do |f| %>
   						<div class="field">
@@ -60,6 +60,7 @@
   						</div>
   						</br>
   						<%= f.button :submit, "Post" %>
+							<%= f.input :picture, as: :file %>
 						<% end %>
       		</section>
     		</aside>
