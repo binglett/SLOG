@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'bringlist/new'
+
+  get 'bringlist/delete'
+
+  get 'bringlist/edit'
+
   resources :events
   resources :hikes
   get 'social/social_list'

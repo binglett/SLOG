@@ -1,0 +1,2 @@
+module BringlistHelper
+end
