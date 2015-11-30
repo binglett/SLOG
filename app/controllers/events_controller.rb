@@ -29,8 +29,7 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
-        format.html { redirect_to @event, notice: 'Event was successfully created.' }
-        format.json { render :show, status: :created, location: @event }
+        format.html { redirect_to action: "index", notice: 'Event was successfully created.' }
       else
         format.html { render :new }
         format.json { render json: @event.errors, status: :unprocessable_entity }
