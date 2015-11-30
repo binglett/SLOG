@@ -3,7 +3,7 @@ class Event < ActiveRecord::Base
   
   validates :hike_id, 	presence: 	true
   validates :location, 	presence: 	true
-  validates :name, 		presence: 	true  
+  validates :name, 		presence: 	true, uniqueness: true  
 
 end
 
